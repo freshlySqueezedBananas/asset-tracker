@@ -42,8 +42,8 @@ export default {
       this.checkedRows = []
     },
     teste(e) {
-      console.log(this.newData);
-      this.tableData = _.pull(this.tableData, e);
+      const index = this.tableData.indexOf(e);
+      this.tableData.splice(index, 1);
     }
   },
 };
